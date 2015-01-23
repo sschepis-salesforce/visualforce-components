@@ -1,0 +1,23 @@
+<apex:page controller="gCal">
+
+	<apex:pageBlock title="Google Calendar" rendered="true">
+		<apex:pageBlockTable value="{!ownCalendars}" var="e">
+			<apex:column >{!e.title}</apex:column>
+		</apex:pageBlockTable>
+		</apex:pageblock>
+
+
+		<apex:pageBlock title="Google " rendered="true">
+			<apex:pageBlockTable value="{!events}" var="e">
+				<apex:column >{!e.title}</apex:column>
+				<apex:column >{!e.starttime}</apex:column>
+			</apex:pageBlockTable>
+			</apex:pageblock>
+
+
+    <apex:pageBlock title="page limits debug" rendered="true" >
+    {!heapSize}<br />
+    {!LimitHeapSize} 
+    </apex:pageBlock>
+	
+</apex:page>
